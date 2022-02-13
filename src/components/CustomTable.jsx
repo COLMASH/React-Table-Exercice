@@ -96,6 +96,7 @@ export const CustomTable = () => {
       <span>
           | Ir a la página:{' '}
           <input
+            data-testid="Go to page input"
             type='number'
             defaultValue={pageIndex + 1}
             onChange={e => {
@@ -106,23 +107,24 @@ export const CustomTable = () => {
           />
         </span>{' '}
    
-        <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
+        <button data-testid="First page" onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
           {'<<'}
         </button>{' '}
-        <button onClick={() => previousPage()} disabled={!canPreviousPage}>
+        <button name='Anterior' onClick={() => previousPage()} disabled={!canPreviousPage}>
           Anterior
         </button>{' '}
-        <button onClick={() => nextPage()} disabled={!canNextPage}>
+        <button name='Siguiente' onClick={() => nextPage()} disabled={!canNextPage}>
           Siguiente
         </button>{' '}
-        <button onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage}>
+        <button data-testid="Final page" onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage}>
           {'>>'}
         </button>{' '}
         <select
+          data-testid="Select items per page"
           value={pageSize}
           onChange={e => setPageSize(Number(e.target.value))}>
           {[10, 25, 50].map(pageSize => (
-            <option key={pageSize} value={pageSize}>
+            <option data-testid="Select options" key={pageSize} value={pageSize}>
               Mostrar {pageSize}
             </option>
           ))}
