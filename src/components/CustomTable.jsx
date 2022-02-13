@@ -2,7 +2,7 @@ import React, { useMemo } from 'react'
 import { useTable, useFilters, useGlobalFilter, useSortBy, usePagination} from 'react-table'
 import MOCK_DATA from './MOCK_DATA.json'
 import { COLUMNS } from './columns'
-import './table.css'
+import './CustomTable.css'
 import { GlobalFilter } from './GlobalFilter'
 import { ColumnFilter } from './ColumnFilter'
 
