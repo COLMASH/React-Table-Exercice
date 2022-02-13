@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import { CustomTable } from './components/table'
+import { CustomTable } from './components/CustomTable'
 
 function App() {
   return (
