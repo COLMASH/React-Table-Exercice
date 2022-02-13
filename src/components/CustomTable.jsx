@@ -88,13 +88,13 @@ export const CustomTable = () => {
       </table>
       <div>
       <span>
-          Page{' '}
+          Página{' '}
           <strong>
-            {pageIndex + 1} of {pageOptions.length}
+            {pageIndex + 1} de {pageOptions.length}
           </strong>{' '}
         </span>
       <span>
-          | Go to page:{' '}
+          | Ir a la página:{' '}
           <input
             type='number'
             defaultValue={pageIndex + 1}
@@ -110,10 +110,10 @@ export const CustomTable = () => {
           {'<<'}
         </button>{' '}
         <button onClick={() => previousPage()} disabled={!canPreviousPage}>
-          Previous
+          Anterior
         </button>{' '}
         <button onClick={() => nextPage()} disabled={!canNextPage}>
-          Next
+          Siguiente
         </button>{' '}
         <button onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage}>
           {'>>'}
@@ -123,7 +123,7 @@ export const CustomTable = () => {
           onChange={e => setPageSize(Number(e.target.value))}>
           {[10, 25, 50].map(pageSize => (
             <option key={pageSize} value={pageSize}>
-              Show {pageSize}
+              Mostrar {pageSize}
             </option>
           ))}
         </select>
