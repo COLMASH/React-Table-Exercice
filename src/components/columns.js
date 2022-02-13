@@ -39,8 +39,8 @@ export const COLUMNS = [
     accessor: 'Concepto6',
   },
   {
-    Header: 'Balance Actual',
-    accessor: 'Balance Actual',
+    Header: 'Balance actual',
+    accessor: 'Balance actual',
   },
   {
     Header: 'Activo',
